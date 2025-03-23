@@ -22,7 +22,7 @@ const Server = http.createServer((req,res)=>{
     else if(req.url.toLowerCase() === "/submit-details" && req.method == "POST"){
         fs.writeFileSync('user.txt','Robiul sk');
         res.statusCode = 302;
-        res.setHeader('location','/');
+        res.setHeader('Location','/');
     }
     res.setHeader('content-type','text/html');
     res.write('<html>');
